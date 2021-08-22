@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="#E4E2E2"
+    tools:context=".activity.Plane">
+
+    <Button
+        android:id="@+id/addPlane_Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="Add Plane" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/PlaneList_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addPlane_Id"
+        android:paddingHorizontal="7dp" />
+
+    <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+        android:id="@+id/lazyLoader_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:lazyloader_animDur="500"
+        app:lazyloader_dotsDist="15dp"
+        app:lazyloader_dotsRadius="10dp"
+        app:lazyloader_firstDelayDur="150"
+        app:lazyloader_firstDotColor="@color/red"
+        app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+        app:lazyloader_secondDelayDur="300"
+        app:lazyloader_secondDotColor="@color/green"
+        app:lazyloader_thirdDotColor="@color/yellow" />
+
+
+</RelativeLayout>

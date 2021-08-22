@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colortitle</item>
+        <item name="colorPrimaryDark">@color/colortitle</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="titleText">
+        <item name="android:alpha">.7</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="titleText2">
+        <item name="android:alpha">.7</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="planeText">
+
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+
+
+    <style name="bus_info_hint">
+
+        <item name="android:textSize">18sp</item>
+        <item name="android:alpha">.7</item>
+        <item name="android:layout_marginLeft">15dp</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddLocationActivity"
+    android:padding="10dp">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/locationEditTextId"
+        android:layout_toLeftOf="@+id/addButtonId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="Location"
+        android:transitionName="locationExt"
+        app:errorIconDrawable="@null"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_fild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/addButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/add_icon" />
+
+    <TextView
+        android:id="@+id/msg_fuild"
+        android:layout_marginTop="10dp"
+        android:textColor="#E62626"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationEditTextId"
+        android:text="Current Locations"
+        android:textSize="20sp" />
+    
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/availableLocationListViewId"
+        android:paddingLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_below="@id/msg_fuild"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ticketadmin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.BusStatistics"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AddPlane"
+            android:exported="true" />
+        <activity
+            android:name=".activity.Forget_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AddTrain"
+            android:exported="true" />
+        <activity
+            android:name=".activity.DataLogActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AddBuss"
+            android:exported="true" />
+        <activity
+            android:name=".AddLocationActivity"
+            android:exported="true" />
+        <activity android:name=".About" />
+        <activity android:name=".ByBoat" />
+        <activity android:name=".activity.Plane" />
+        <activity android:name=".activity.Train" />
+        <activity android:name=".activity.Bus" />
+        <activity
+            android:name=".BoatActivity"
+            android:label="@string/title_activity_boat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".OnboardingScreenActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".DashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar_TransparentStatusBar" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

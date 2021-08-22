@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "515843012652",
+    "firebase_url": "https://ticket-booking-78c5b-default-rtdb.firebaseio.com",
+    "project_id": "ticket-booking-78c5b",
+    "storage_bucket": "ticket-booking-78c5b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515843012652:android:0d3efbf6d73157455c7989",
+        "android_client_info": {
+          "package_name": "com.example.smartTicketingAdmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515843012652-7os629srv9t4ss2ibbo35l9l2rp9k3ho.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwL5ziRWC9M2tivPqcBM3OIblWLA_t1ns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515843012652-7os629srv9t4ss2ibbo35l9l2rp9k3ho.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginVertical="5dp"
+        android:id="@+id/parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_view_busName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suva Travels"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/text_view_busNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BusNumber: BHE 9870"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/text_view_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:05 AM - 3:00 pm"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cost_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="1200 taka"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/themeColor"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    android:id="@+id/text_view_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha=".8"
+                    android:text="A/C Sleepers"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/total_seat_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:alpha=".8"
+                    android:text="28 seats"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textSize="18sp" />
+
+
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:background="#DADADA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_view_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chapai Nawabganj"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" To "
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+                <TextView
+                    android:id="@+id/text_view_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dhaka"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="12"
+    android:orientation="vertical"
+    tools:context=".OnboardingScreenActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10.5">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/sliderId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:visibility="visible"
+            android:id="@+id/skipSlideButtonId"
+            android:onClick="skipSlide"
+            android:backgroundTint="#00000000"
+            android:text="Skip"
+            android:textColor="#000"
+            android:layout_alignParentRight="true"
+            android:drawableEnd="@drawable/ic_skip_next_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/buttonBarButtonStyle"
+            android:drawableRight="@drawable/ic_skip_next_black_24dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        >
+        <com.google.android.material.button.MaterialButton
+            android:onClick="lesGetStarted"
+            android:visibility="invisible"
+            android:id="@+id/lets_get_startedBtnId"
+            android:layout_width="match_parent"
+            android:text="@string/lets_get_started"
+            android:layout_marginLeft="20dp"
+            app:cornerRadius="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/dotsLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:visibility="visible"
+            android:onClick="nextSlide"
+            android:id="@+id/nextSlideButtonId"
+            app:backgroundTint="#0000"
+            android:drawableEnd="@drawable/ic_navigate_next_black_24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_navigate_next_black_24dp" />
+    </RelativeLayout>
+</LinearLayout>

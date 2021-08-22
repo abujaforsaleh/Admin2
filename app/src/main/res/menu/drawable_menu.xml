@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nev_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+
+
+       <!-- <item
+            android:id="@+id/nev_bus"
+            android:icon="@drawable/fly"
+            android:title="By Bus" />
+        <item
+            android:id="@+id/nev_train"
+            android:icon="@drawable/fly"
+            android:title="By Train" />
+
+
+        <item
+            android:id="@+id/nev_plane"
+            android:icon="@drawable/fly"
+            android:title="By Plane" />
+        <item
+            android:id="@+id/nev_boat"
+            android:icon="@drawable/boat"
+            android:title="By Boat" />
+
+        <item
+            android:id="@+id/nev_bike"
+            android:icon="@drawable/boat"
+            android:title="By Bike" />
+        <item
+            android:id="@+id/nev_road"
+            android:icon="@drawable/fly"
+            android:title="By Road" />-->
+
+
+    </group>
+
+
+
+    <item android:title="Statas">
+        <menu>
+            <item
+                android:id="@+id/nev_logout"
+                android:icon="@drawable/logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>

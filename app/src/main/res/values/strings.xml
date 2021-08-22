@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Smart Ticketing</string>
+    <!--Comment 'ctrl + shift + /'-->
+
+    <!--Slide Titles-->
+    <string name="first_slide_title">Junaed1</string>
+    <string name="second_slide_title">Junaed2</string>
+    <string name="third_slide_title">Junaed3</string>
+    <string name="fourth_slide_title">Junaed4</string>
+
+
+    <!--Description-->
+    <string name="first_slide_disc">Festus pess ducunt ad lacta.Nunquam convertam adelphis.To the clammy asparagus add blood oranges, pork butt, worcestershire sauce and salty doughnut.</string>
+    <string name="second_slide_disc">To the hardened rice add lettuce, walnut, oyster sauce and dark steak.Whisk the ginger with crusted black cardamon, and lime making sure to cover all of it.</string>
+    <string name="third_slide_disc">Galactic emitters, to the center.Seaweed can be enameled with smooth melon, also try covering the stew with meatballs sauce.</string>
+    <string name="fourth_slide_disc">Mix the oysters with minced basil, brown sugar, rum, and pepper making sure to cover all of it.Decorate each side of the tuna with twelve oz of carrots.</string>
+    <string name="lets_get_started">Lets Get Started</string>
+
+
+    <string name="open_navigation_drawer">Open Navigation Drawer</string>
+    <string name="close_navigation_drawer">Close Navigation Drawer</string>
+    <string name="title_activity_boat">BoatActivity</string>
+</resources>

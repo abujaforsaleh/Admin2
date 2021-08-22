@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RegistrationActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <RelativeLayout
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.agrawalsuneet.dotsloader.loaders.LazyLoader
+            android:id="@+id/lazyLoader_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:lazyloader_animDur="500"
+            app:lazyloader_dotsDist="15dp"
+            app:lazyloader_dotsRadius="10dp"
+            app:lazyloader_firstDelayDur="150"
+            app:lazyloader_firstDotColor="@color/red"
+            app:lazyloader_interpolator="@android:anim/decelerate_interpolator"
+            app:lazyloader_secondDelayDur="300"
+            app:lazyloader_secondDotColor="@color/green"
+            app:lazyloader_thirdDotColor="@color/yellow" />
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageViewReg"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_alignParentTop="true"
+            android:transitionName="logo_image"
+            app:srcCompat="@drawable/travelling" />
+
+        <TextView
+            android:id="@+id/welcomeTextViewReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewReg"
+            android:text="Welcome to Smart Ticketing"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:transitionName="logo_title"
+            app:fontFamily="@font/bungee" />
+
+        <TextView
+            android:id="@+id/continueTextViewReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcomeTextViewReg"
+            android:text="Sign Up To Start Your New Journey"
+            android:textSize="18sp"
+            android:transitionName="welcome_title"
+            app:fontFamily="sans-serif-medium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/continueTextViewReg"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullNameEditTextIdReg"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:lines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/userNameEditTextIdReg"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="UserName"
+                android:transitionName="userName_Etx"
+                app:counterEnabled="true"
+                app:counterMaxLength="15"
+                app:hintAnimationEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLength="15" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailEditTextIdReg"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                app:errorEnabled="true"
+                android:transitionName="userName_Etx"
+                app:hintAnimationEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:lines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneNoEditTextIdReg"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone"
+                app:errorEnabled="true"
+                android:transitionName="userName_Etx"
+                app:hintAnimationEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:lines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordEditTextIdReg"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:transitionName="password_Etx"
+                app:counterMaxLength="15"
+                app:hintAnimationEnabled="true"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorAccent"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@null"
+                app:counterEnabled="true"
+                app:passwordToggleTintMode="multiply">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLength="15" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signUpButtonIdReg"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2196F3"
+                android:layout_margin="20dp"
+                android:onClick="regButtonClick"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textColor="#232323"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:transitionName="go_btn" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logInButtonId"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#FFFFFF"
+                android:onClick="logInButtonClick"
+                android:textAllCaps="false"
+                android:text="Already have an Account ? Login"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:transitionName="other_btn" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

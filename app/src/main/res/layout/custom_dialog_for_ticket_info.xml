@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:id="@+id/close"
+        android:src="@drawable/close"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textSize="23sp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:text="Your Ticket"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+             >
+
+                <TextView
+                    android:id="@+id/vehicle_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:text="Hanif Paribohon"
+                    android:textSize="28sp"
+                    android:background="#E6E6E6"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha=".7"
+                        android:text="From" />
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/titleText"
+                        android:text="To"
+                        android:alpha=".7"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:alpha=".7"
+                        android:text="Rajshahi"
+                        android:textSize="28dp" />
+
+                    <ImageView
+                        android:id="@+id/vehicle_pic"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/bus" />
+
+                    <TextView
+                        android:id="@+id/to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:alpha=".7"
+                        android:text="Dhaka"
+                        android:textSize="28dp" />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha=".6"
+                    android:background="#000"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha=".4"
+                        android:text="Arrival" />
+
+                    <TextView
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:alpha=".4"
+                        android:text="Departure" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/arival"
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha=".5"
+                        android:text="04:30pm"
+                         />
+
+                    <TextView
+                        android:id="@+id/departure"
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:alpha=".5"
+                        android:text="11:00am" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha=".4"
+                        android:text="Vehicle Type" />
+
+                    <TextView
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:alpha=".4"
+                        android:text="Seat" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/vehicle_condition"
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha=".5"
+                        android:text="Non AC"
+                         />
+
+                    <TextView
+                        android:id="@+id/seats"
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:alpha=".5"
+                        android:text="B3,B4" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/bus_number_msg"
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha=".4"
+                        android:text="Bus Number" />
+
+                    <TextView
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:alpha=".4"
+                        android:text="Cost" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/vehicle_number"
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha=".5"
+                        android:text="Hanif-123"
+                         />
+
+                    <TextView
+                        android:id="@+id/cost"
+                        style="@style/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:alpha=".5"
+                        android:text="550 TK" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</LinearLayout>

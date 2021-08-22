@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Alpha helps to fade the view-->
+    <!--fromAlpha="0.0" means view be invisible then visible-->
+    <!--toAlpha="1.0" means view be fully visible-->
+    <alpha
+        android:fromAlpha="0.1"
+        android:toAlpha="1.0"
+        android:duration = "1200"/>
+
+    <!--fromXDelta="100%" means view will come from the Right Side-->
+    <!--fromXDelta="-100%" means view will come from the Left Side-->
+
+    <!--fromYDelta="100%" means view will come from the Bottom Side-->
+    <!--fromYDelta="-100%" means view will come from the Top Side-->
+
+    <!--According to theValue-->
+    <translate
+        android:fromXDelta="0%"
+        android:fromYDelta="100%"
+        android:duration = "800"/>
+</set>

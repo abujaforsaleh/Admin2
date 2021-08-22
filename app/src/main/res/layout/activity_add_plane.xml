@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E2E2"
+    tools:context=".activity.AddPlane">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/profile_toolbar_id"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/themecolor"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/addplaneback"
+                android:layout_width="65dp"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="16dp"
+                android:src="@drawable/back_btn"
+                app:tint="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="30dp"
+                android:maxLength="30"
+                android:text="Add Plane"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:text="Plane Details" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginVertical="7dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/travelsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:layout_margin="7dp"
+                    android:hint="Agency Name" />
+
+                <EditText
+                    android:id="@+id/busNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_margin="7dp"
+                    android:inputType="textPersonName"
+                    android:hint="Plane Number" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/bus_info_hint"
+                    android:text="Source Airport"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <Spinner
+                        android:id="@+id/sourceAirport"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:layout_toLeftOf="@id/sourceAirportTimer"
+                        android:ems="10"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/sourceAirportTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Arrival Time"
+                        android:textSize="18dp" />
+
+
+
+                </RelativeLayout>
+
+
+
+                <EditText
+                    android:id="@+id/counter1_ticket_rice"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:layout_margin="7dp"
+                    android:hint="Ticket Price"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/bus_info_hint"
+                    android:text="Destination Airport"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/destinationid"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_toLeftOf="@id/destinationAirportTimer"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:ems="10"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/destinationAirportTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Arrival Time"
+                        android:textSize="18dp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Total Rows"
+                    android:id="@+id/total_row"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:layout_margin="7dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Columns Sample(A for seat,_for space)"
+                    android:id="@+id/column_sample"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:layout_margin="7dp"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+        <Button
+            android:id="@+id/addPlane"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:layout_height="50dp"
+            android:text="Add Plane" />
+
+
+    </LinearLayout>
+
+</ScrollView>
