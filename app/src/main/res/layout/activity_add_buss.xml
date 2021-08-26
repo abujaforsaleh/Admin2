@@ -377,12 +377,15 @@
                         android:hint="Total Rows"
                         android:id="@+id/total_row"
                         android:ems="10"
-                        android:inputType="textPersonName"
+                        android:inputType="number"
+                        android:digits="0123456789"
                         android:layout_margin="7dp"
                         />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:inputType="textCapCharacters"
+                        android:digits="A_"
                         android:hint="Columns Sample(A for seat,_for space)"
                         android:id="@+id/column_sample_bus"
                         android:ems="10"

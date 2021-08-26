@@ -205,7 +205,10 @@ public class AddBuss extends AppCompatActivity implements View.OnClickListener, 
             if(TextUtils.isEmpty(total_row.getText().toString()) ||TextUtils.isEmpty(column_sample.getText().toString()) ||TextUtils.isEmpty(travels_name.getText().toString()) || TextUtils.isEmpty(bus_number.getText().toString()) || TextUtils.isEmpty(counter1_ticket_price.getText().toString())){
                 lazyLoader.setVisibility(View.GONE);
                 Toast.makeText(this, "Please fill all the information", Toast.LENGTH_SHORT).show();
-            }else{
+            }else if(Integer.parseInt(tot_row)>15){
+                Toast.makeText(getApplicationContext(), "Row is unreal", Toast.LENGTH_SHORT).show();
+            }
+            else{
                 tr_name = travels_name.getText().toString();
                 bus_num=bus_number.getText().toString();
                 tot_row = total_row.getText().toString();

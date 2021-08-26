@@ -157,6 +157,8 @@ public class AddPlane extends AppCompatActivity implements View.OnClickListener,
 
             if(TextUtils.isEmpty(total_row.getText().toString()) ||(TextUtils.isEmpty(columnSample.getText().toString()) && columnSample.getText().toString().length()>=2)||TextUtils.isEmpty(agency_name.getText().toString()) || TextUtils.isEmpty(plane_number.getText().toString()) || TextUtils.isEmpty(ticket_price.getText().toString())){
                 Toast.makeText(this, "Please fill all the information", Toast.LENGTH_SHORT).show();
+            }else if(Integer.parseInt(tot_row)>60){
+                Toast.makeText(getApplicationContext(), "Row is unreal", Toast.LENGTH_SHORT).show();
             }else{
                 agencyNameVariable = agency_name.getText().toString();
                 planeNumberVariable=plane_number.getText().toString();

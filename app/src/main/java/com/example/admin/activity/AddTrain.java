@@ -191,7 +191,10 @@ public class AddTrain extends AppCompatActivity  implements View.OnClickListener
 
             if(TextUtils.isEmpty(total_row.getText().toString()) ||TextUtils.isEmpty(total_column.getText().toString()) ||TextUtils.isEmpty(travels_name.getText().toString()) || TextUtils.isEmpty(bogy_number.getText().toString()) || TextUtils.isEmpty(counter1_ticket_price.getText().toString())){
                 Toast.makeText(this, "Please fill all the information", Toast.LENGTH_SHORT).show();
-            }else{
+            }else if(Integer.parseInt(tot_row)>40){
+                Toast.makeText(getApplicationContext(), "Row is unreal", Toast.LENGTH_SHORT).show();
+            }
+            else{
                 tr_name = travels_name.getText().toString();
                 bogy_num=bogy_number.getText().toString();
                 tot_row = total_row.getText().toString();
