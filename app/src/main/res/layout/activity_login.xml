@@ -16,6 +16,7 @@
 
             <com.agrawalsuneet.dotsloader.loaders.LazyLoader
                 android:id="@+id/lazyLoader_id"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"

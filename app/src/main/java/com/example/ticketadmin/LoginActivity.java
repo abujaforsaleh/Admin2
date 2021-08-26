@@ -67,7 +67,8 @@ public class LoginActivity extends AppCompatActivity {
         loader.setAnimDuration(500);
         loader.setFirstDelayDuration(100);
         loader.setSecondDelayDuration(200);
-        loader.setInterpolator(new LinearInterpolator());
+
+
         mAuth = FirebaseAuth.getInstance();
         logInButton = findViewById(R.id.logInButtonId);
 
@@ -166,7 +167,8 @@ public class LoginActivity extends AppCompatActivity {
 
         Log.d("values", email+" "+password);
         //frameLayout.setVisibility(View.VISIBLE);
-        //progressBar.setVisibility(View.VISIBLE);
+        //
+        lazyLoader.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
 
             if (task.isSuccessful()) {

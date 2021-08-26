@@ -62,6 +62,7 @@ public class RegistrationActivity extends AppCompatActivity implements TextWatch
         ButterKnife.bind(this);
 
         lazyLoader = findViewById(R.id.lazyLoader_id);
+        lazyLoader.setVisibility(View.GONE);
 
 
         user_reference = FirebaseDatabase.getInstance().getReference("UserInfo");
@@ -220,6 +221,8 @@ public class RegistrationActivity extends AppCompatActivity implements TextWatch
         loader.setSecondDelayDuration(200);
         loader.setInterpolator(new LinearInterpolator());
         lazyLoader.addView(loader);
+
+
         String password = passwordEditText.getEditText().getText().toString();
         String fullName = fullNameEditText.getEditText().getText().toString();
         String userName = userNameEditText.getEditText().getText().toString();
