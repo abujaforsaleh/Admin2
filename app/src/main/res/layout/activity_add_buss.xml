@@ -383,10 +383,9 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:hint="Total Columns"
-                        android:id="@+id/total_column"
+                        android:hint="Columns Sample(A for seat,_for space)"
+                        android:id="@+id/column_sample_bus"
                         android:ems="10"
-                        android:inputType="numberDecimal"
                         android:layout_margin="7dp"
                         />
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ticketadmin">
+    package="com.example.admin">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,42 +12,42 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.BusStatistics"
+            android:name="com.example.admin.activity.BusStatistics"
             android:exported="true" />
         <activity
-            android:name=".activity.AddPlane"
+            android:name="com.example.admin.activity.AddPlane"
             android:exported="true" />
         <activity
-            android:name=".activity.Forget_Activity"
+            android:name="com.example.admin.activity.Forget_Activity"
             android:exported="true" />
         <activity
-            android:name=".activity.AddTrain"
+            android:name="com.example.admin.activity.AddTrain"
             android:exported="true" />
         <activity
-            android:name=".activity.DataLogActivity"
+            android:name="com.example.admin.activity.DataLogActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.admin.activity.AddBuss"
             android:exported="true" />
         <activity
-            android:name=".activity.AddBuss"
+            android:name="com.example.admin.AddLocationActivity"
             android:exported="true" />
+        <activity android:name="com.example.admin.About" />
+        <activity android:name="com.example.admin.ByBoat" />
+        <activity android:name="com.example.admin.activity.Plane" />
+        <activity android:name="com.example.admin.activity.Train" />
+        <activity android:name="com.example.admin.activity.Bus" />
         <activity
-            android:name=".AddLocationActivity"
-            android:exported="true" />
-        <activity android:name=".About" />
-        <activity android:name=".ByBoat" />
-        <activity android:name=".activity.Plane" />
-        <activity android:name=".activity.Train" />
-        <activity android:name=".activity.Bus" />
-        <activity
-            android:name=".BoatActivity"
+            android:name="com.example.admin.BoatActivity"
             android:label="@string/title_activity_boat"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".OnboardingScreenActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name="com.example.admin.OnboardingScreenActivity" />
+        <activity android:name="com.example.admin.RegistrationActivity" />
+        <activity android:name="com.example.admin.LoginActivity" />
         <activity
-            android:name=".DashboardActivity"
+            android:name="com.example.admin.DashboardActivity"
             android:theme="@style/AppTheme.NoActionBar_TransparentStatusBar" />
-        <activity android:name=".SplashScreen">
+        <activity android:name="com.example.admin.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
