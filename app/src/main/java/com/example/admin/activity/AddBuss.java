@@ -55,7 +55,7 @@ public class AddBuss extends AppCompatActivity implements View.OnClickListener, 
     String spinner_default_item="Select an Option";
     TextView counter1_timer, counter2_timer, counter3_timer, destination_timer;
     String[] bus_types = { "AC", "Non AC", "Slipper"};
-    String tr_name, bus_num, cou_1_tic_price, cou_2_tic_price="", cou_3_tic_price="", tot_seat, tot_row, tot_col;
+    String tr_name, bus_num, cou_1_tic_price, cou_2_tic_price="", cou_3_tic_price="", tot_seat, tot_row, columnSampleVar;
     String bus_type_selected = "",counter1_name="", counter2_name="", counter3_name="", destination_counter_name="";
 
     private TimePickerDialog dialog1, dialog2, dialog3, dialog4;
@@ -202,7 +202,7 @@ public class AddBuss extends AppCompatActivity implements View.OnClickListener, 
             loader.setInterpolator(new LinearInterpolator());
             lazyLoader.addView(loader);
 
-            if(TextUtils.isEmpty(total_row.getText().toString()) ||TextUtils.isEmpty(column_sample.getText().toString()) ||TextUtils.isEmpty(travels_name.getText().toString()) || TextUtils.isEmpty(bus_number.getText().toString()) || TextUtils.isEmpty(counter1_ticket_price.getText().toString())){
+            if(TextUtils.isEmpty(total_row.getText().toString()) ||TextUtils.isEmpty(column_sample.getText().toString()) || column_sample.getText().toString().length()<=4||TextUtils.isEmpty(travels_name.getText().toString()) || TextUtils.isEmpty(bus_number.getText().toString()) || TextUtils.isEmpty(counter1_ticket_price.getText().toString())){
                 lazyLoader.setVisibility(View.GONE);
                 Toast.makeText(this, "Please fill all the information", Toast.LENGTH_SHORT).show();
             }else if(Integer.parseInt(tot_row)>15){
@@ -212,9 +212,9 @@ public class AddBuss extends AppCompatActivity implements View.OnClickListener, 
                 tr_name = travels_name.getText().toString();
                 bus_num=bus_number.getText().toString();
                 tot_row = total_row.getText().toString();
-                tot_col = String.valueOf(column_sample.getText().toString().split("A", -1).length - 1);
+                columnSampleVar = String.valueOf(column_sample.getText().toString().split("A", -1).length - 1);
 
-                tot_seat = String.valueOf(Integer.parseInt(tot_row)*Integer.parseInt(tot_col));
+                tot_seat = String.valueOf(Integer.parseInt(tot_row)*Integer.parseInt(columnSampleVar));
 
                 String seatPlan = creatingSeatPlan(Integer.parseInt(tot_row) , column_sample.getText().toString());
 

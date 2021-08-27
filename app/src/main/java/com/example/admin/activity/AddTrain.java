@@ -134,7 +134,7 @@ public class AddTrain extends AppCompatActivity  implements View.OnClickListener
         counter2_timer.setOnClickListener(this);
         counter3_timer.setOnClickListener(this);
         destination_timer.setOnClickListener(this);
-        
+
     }
 
     private List<String> creatingSeatPlan(int total_bugy, int total_row, String colum_sample){
@@ -189,7 +189,7 @@ public class AddTrain extends AppCompatActivity  implements View.OnClickListener
 
         if(v.getId()==R.id.addTrain){
 
-            if(TextUtils.isEmpty(total_row.getText().toString()) ||TextUtils.isEmpty(total_column.getText().toString()) ||TextUtils.isEmpty(travels_name.getText().toString()) || TextUtils.isEmpty(bogy_number.getText().toString()) || TextUtils.isEmpty(counter1_ticket_price.getText().toString())){
+            if(counter1_name.equals(spinner_default_item) || destination_counter_name.equals(spinner_default_item) || TextUtils.isEmpty(total_row.getText().toString()) || TextUtils.isEmpty(total_column.getText().toString()) || TextUtils.isEmpty(travels_name.getText().toString()) || TextUtils.isEmpty(bogy_number.getText().toString()) || TextUtils.isEmpty(counter1_ticket_price.getText().toString())){
                 Toast.makeText(this, "Please fill all the information", Toast.LENGTH_SHORT).show();
             }else if(Integer.parseInt(tot_row)>40){
                 Toast.makeText(getApplicationContext(), "Row is unreal", Toast.LENGTH_SHORT).show();
