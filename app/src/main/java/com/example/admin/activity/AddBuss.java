@@ -191,8 +191,6 @@ public class AddBuss extends AppCompatActivity implements View.OnClickListener, 
 
         if(v.getId()==R.id.addBus){
 
-
-
             LazyLoader loader = new LazyLoader(this, 30, 20, ContextCompat.getColor(this, R.color.loader_selected),
                     ContextCompat.getColor(this, R.color.loader_selected),
                     ContextCompat.getColor(this, R.color.loader_selected));
@@ -201,21 +199,20 @@ public class AddBuss extends AppCompatActivity implements View.OnClickListener, 
             loader.setSecondDelayDuration(200);
             loader.setInterpolator(new LinearInterpolator());
             lazyLoader.addView(loader);
+            tot_row = total_row.getText().toString();
 
             if(TextUtils.isEmpty(total_row.getText().toString()) ||TextUtils.isEmpty(column_sample.getText().toString()) || column_sample.getText().toString().length()<=4||TextUtils.isEmpty(travels_name.getText().toString()) || TextUtils.isEmpty(bus_number.getText().toString()) || TextUtils.isEmpty(counter1_ticket_price.getText().toString())){
                 lazyLoader.setVisibility(View.GONE);
                 Toast.makeText(this, "Please fill all the information", Toast.LENGTH_SHORT).show();
-            }else if(Integer.parseInt(tot_row)>15){
+            }else if(Integer.parseInt(tot_row)>12){
                 Toast.makeText(getApplicationContext(), "Row is unreal", Toast.LENGTH_SHORT).show();
             }
             else{
                 tr_name = travels_name.getText().toString();
                 bus_num=bus_number.getText().toString();
-                tot_row = total_row.getText().toString();
+
                 columnSampleVar = String.valueOf(column_sample.getText().toString().split("A", -1).length - 1);
-
                 tot_seat = String.valueOf(Integer.parseInt(tot_row)*Integer.parseInt(columnSampleVar));
-
                 String seatPlan = creatingSeatPlan(Integer.parseInt(tot_row) , column_sample.getText().toString());
 
                 //checking counter 1 info

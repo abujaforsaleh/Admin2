@@ -54,7 +54,7 @@ public class AddTrain extends AppCompatActivity  implements View.OnClickListener
     String spinner_default_item="Select an Option";
     TextView counter1_timer, counter2_timer, counter3_timer, destination_timer;
     String[] train_types = { "AC", "Non AC", "Slipper"};
-    String tr_name, bogy_num, cou_1_tic_price, cou_2_tic_price="", cou_3_tic_price="", tot_row, column_sample;
+    String tr_name="", bogy_num="", cou_1_tic_price="", cou_2_tic_price="", cou_3_tic_price="", tot_row="", column_sample="";
     String train_type_selected = "",counter1_name="", counter2_name="", counter3_name="", destination_counter_name="";
 
     private TimePickerDialog dialog1, dialog2, dialog3, dialog4;
@@ -189,16 +189,17 @@ public class AddTrain extends AppCompatActivity  implements View.OnClickListener
 
         if(v.getId()==R.id.addTrain){
 
+            tr_name = travels_name.getText().toString();
+            bogy_num=bogy_number.getText().toString();
+            tot_row = total_row.getText().toString();
+            column_sample = total_column.getText().toString();
+
             if(counter1_name.equals(spinner_default_item) || destination_counter_name.equals(spinner_default_item) || TextUtils.isEmpty(total_row.getText().toString()) || TextUtils.isEmpty(total_column.getText().toString()) || TextUtils.isEmpty(travels_name.getText().toString()) || TextUtils.isEmpty(bogy_number.getText().toString()) || TextUtils.isEmpty(counter1_ticket_price.getText().toString())){
                 Toast.makeText(this, "Please fill all the information", Toast.LENGTH_SHORT).show();
             }else if(Integer.parseInt(tot_row)>40){
                 Toast.makeText(getApplicationContext(), "Row is unreal", Toast.LENGTH_SHORT).show();
             }
             else{
-                tr_name = travels_name.getText().toString();
-                bogy_num=bogy_number.getText().toString();
-                tot_row = total_row.getText().toString();
-                column_sample = total_column.getText().toString();
 
                 List<String> seatPlan = creatingSeatPlan(Integer.parseInt(bogy_num), Integer.parseInt(tot_row) , column_sample);
 
@@ -259,12 +260,15 @@ public class AddTrain extends AppCompatActivity  implements View.OnClickListener
 
 
                 if(seatPlan.size()>0){
+                    Log.d("train_val","ok");
                     TrainBundle trainBundle= new TrainBundle(tr_name, bogy_num, cou_1_tic_price, cou_2_tic_price, cou_3_tic_price, counter1_name, counter2_name, counter3_name, destination_counter_name, train_type_selected, seatPlan, counter1_time, counter2_time, counter3_time, destination_time);
                     adtrainref.child(tr_name+"_"+counter1_name+"_"+destination_counter_name).setValue(trainBundle);
 
+                    Log.d("train_val", tr_name+" "+counter1_name+" "+destination_counter_name);
                     Intent intent = new Intent(this, DashboardActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                    this.startActivity(intent);
+                    startActivity(intent);
+                    //finish();
 
                     Toast.makeText(this, "data sent", Toast.LENGTH_SHORT).show();
                 }else{

@@ -155,6 +155,7 @@ public class AddPlane extends AppCompatActivity implements View.OnClickListener,
 
         if(v.getId()==R.id.addPlane){
 
+            tot_row = total_row.getText().toString();
             if(sourceAirportNameVariable.equals(spinner_default_item) || destinationAirport.equals(spinner_default_item) || TextUtils.isEmpty(total_row.getText().toString()) ||TextUtils.isEmpty(columnSample.getText().toString()) || columnSample.getText().toString().length()<=3 || TextUtils.isEmpty(agency_name.getText().toString()) || TextUtils.isEmpty(plane_number.getText().toString()) || TextUtils.isEmpty(ticket_price.getText().toString())){
                 Toast.makeText(this, "Please fill all the information", Toast.LENGTH_SHORT).show();
             }else if(Integer.parseInt(tot_row)>60){
@@ -162,7 +163,7 @@ public class AddPlane extends AppCompatActivity implements View.OnClickListener,
             }else{
                 agencyNameVariable = agency_name.getText().toString();
                 planeNumberVariable=plane_number.getText().toString();
-                tot_row = total_row.getText().toString();
+
                 columnSampleVar = '/'+columnSample.getText().toString();
 
                 String seatPlan = creatingSeatPlan(Integer.parseInt(tot_row) , columnSampleVar);
